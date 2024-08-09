@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%=JSON.stringify(user) %>
+    <ul>
+        <li><a  href="/create">Home</a></li>
+        <li><a  href="/">News</a></li>
+      
+      </ul>
+      <div class="form">
+        <form action="/update-user/<%= user.ID %>" method="post">
+          <fieldset>
+            <legend>Personalia</legend>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value="<%=user.EMAIL%>" >
+          </div>
+          <div class="input-group">
+            <label for="name">Name:</label>
+          <input type="text" id="name" name="name" value="<%=user.name%>" >
+          </div>
+          <div class="input-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" value="<%=user.city%>" >
+          </div>
+          <div>
+            <button class="btn"> Save</button>
+          </div>
+        </fieldset>
+        </form>
+        
+      
+
+      </div>
+</body>
+</html>

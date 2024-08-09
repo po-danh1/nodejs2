@@ -1,0 +1,89 @@
+
+<!-- <style>
+    *{
+        margin: 0;
+    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #04AA6D;
+}
+</style> -->
+
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <ul>
+        <li><a class="active"  href="/create">Home</a></li>
+        <li><a href="/">News</a></li>
+      
+      </ul>
+      <div class="container">
+        <div class="title">
+            List user
+        </div>
+        <table>
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>City</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <% users.forEach(user => { %>
+                  <tr>
+                      <td><%= user.ID %></td>
+                      <td><%= user.name %></td>
+                      <td><%= user.EMAIL %></td>
+                      <td><%= user.city %></td>
+                      <td>
+                          <a href="/update/<%= user.ID %>" >Edit</a>
+                          <a href="/delete/<%= user.ID %>">Delete</a>
+                        
+                      </td>
+                  </tr>
+              <% }); %>
+          </tbody>
+      </table>
+      </div>
+  
+     
+</body>
+</html>
